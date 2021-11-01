@@ -1,4 +1,4 @@
-# CS 2263 Homework 01 - Solution
+# CS 2263 Homework 02 - Solution
 
 This project aimed to give students a refresher in Java while also to give practical experience in using Gradle, Git, GitHub, and GitFlow.
 The project was to implement a simple mathematical expression evaluator (without worrying about order of operations), allowing students to
