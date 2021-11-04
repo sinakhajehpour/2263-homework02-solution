@@ -37,7 +37,7 @@ dependencies {
 
 application {
     // Define the main class for the application.
-    mainClass = 'edu.isu.cs.cs2263.hw01.App'
+    mainClass = 'edu.isu.cs.cs2263.hw02.App'
 }
 
 tasks.named('test') {
@@ -46,6 +46,6 @@ tasks.named('test') {
 }
 
 javafx {
-    version = "15"
+    version = "17"
     modules = ['javafx.controls']
 }

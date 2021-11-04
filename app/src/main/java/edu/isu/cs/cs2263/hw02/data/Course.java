@@ -1,4 +1,4 @@
-package edu.isu.cs.cs2263.hw01.data;
+package edu.isu.cs.cs2263.hw02.data;
 
 public class Course {
 

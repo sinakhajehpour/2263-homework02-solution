@@ -1,6 +1,6 @@
-package edu.isu.cs.cs2263.hw01.views;
+package edu.isu.cs.cs2263.hw02.views;
 
-import edu.isu.cs.cs2263.hw01.App;
+import edu.isu.cs.cs2263.hw02.App;
 import javafx.geometry.Pos;
 import javafx.scene.control.Label;
 import javafx.scene.layout.BorderPane;
