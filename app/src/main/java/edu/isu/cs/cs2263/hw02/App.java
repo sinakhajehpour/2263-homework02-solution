@@ -20,7 +20,6 @@ import javafx.stage.Stage;
 import org.kordamp.ikonli.javafx.FontIcon;
 import org.kordamp.ikonli.materialdesign2.MaterialDesignF;
 import org.kordamp.ikonli.materialdesign2.MaterialDesignP;
-
 import java.util.Map;
 import java.util.Optional;
 import java.util.Vector;
@@ -59,13 +58,13 @@ public class App extends Application {
      *                     primary stages.
      * @throws Exception if something goes wrong
      */
-    @Override
+
     public void start(Stage primaryStage) throws Exception {
         primaryStage.setTitle("Course View");
 
         Button display = new Button("Display (dept.)");
         display.setOnAction(event -> {
-           displayList();
+            displayList();
         });
         display.setGraphic(FontIcon.of(MaterialDesignF.FORMAT_LIST_TEXT, 20));
 
@@ -80,6 +79,8 @@ public class App extends Application {
             exit();
         });
         exit.setGraphic(FontIcon.of(MaterialDesignP.POWER, 20));
+
+
 
         depts = new ChoiceBox<>();
         depts.setOnAction(event -> {
@@ -125,11 +126,9 @@ public class App extends Application {
 
         primaryStage.show();
     }
-
     public Vector<Course> getCourses() {
         return courses;
     }
-
     private void setView(String viewName) {
         mainLayout.getChildren().remove(currentView.getView());
         currentView = views.get(viewName);
@@ -137,16 +136,19 @@ public class App extends Application {
         mainLayout.requestLayout();
     }
 
+
+
     public void showCourseForm() {
         setView("CourseForm");
         currentView.updateData();
     }
 
+
+
     public void displayList() {
         setView("DisplayList");
         currentView.updateData();
     }
-
     public void exit() {
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
         alert.setTitle("Confirmation");
@@ -158,20 +160,16 @@ public class App extends Application {
                 System.exit(0);
         });
     }
-
     public int getSelectedDepartment() {
         return depts.getSelectionModel().getSelectedIndex();
     }
-
     public void showWelcome() {
         setView("Welcome");
     }
-
     public void addCourse(Course course) {
         courses.add(course);
     }
-
     public static void main(String[] args) {
-        Application.launch(args);
+       launch(args);
     }
 }
